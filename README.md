@@ -59,7 +59,6 @@ inurl:id= & intext:"Warning: mysql_query()"
 
 
 ## ISSUES
-___
 
 ### Issuse n° 1
 This script work only for french google.
