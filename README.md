@@ -6,6 +6,8 @@ This nodeJs script scrappes mysql errors found on google using puppeteer.
 
 All error will be save on a file *.txt*
 
+It's look like [THIS](https://www.instagram.com/reel/Chm_IjoDS5n/)
+
 ## Summary
 
 1. [USAGE](#Usage)
@@ -19,7 +21,7 @@ All error will be save on a file *.txt*
 ```
 mkdir megs
 cd megs
-git clone [this repositories url]
+git clone https://github.com/YR72dpi/mysql_error_google_scrapper.git
 # unzip
 npm update
 npm run megs
