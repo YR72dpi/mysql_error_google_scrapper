@@ -16,7 +16,7 @@ It's look like [THIS](https://www.instagram.com/reel/Chm_IjoDS5n/)
 
 3. [**ISSUES**](#ISSUES)
 
-4. [To improve it](#to)
+4. [To improve it](#to-improve-it)
 
 ## Usage
 
