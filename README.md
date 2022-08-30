@@ -79,5 +79,7 @@ This script is caught as a robot, often, after **29** query.
 ## To improve it
 
 1. Fix *Issues n° 1*
-2. Build a system to change of vpn each 25 query
+2. Build a system to not get caught as a robot, like :
+    - connect the script to a vpn and change of vpn each 25 query
+    - connect the script to a google account and manage the reCaptcha(which already trust you)
 

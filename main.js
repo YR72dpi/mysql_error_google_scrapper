@@ -12,7 +12,7 @@ console.log("\x1b[34m", "\n\nNombre de faille : " + nbr_faille)
 console.log(faille)
 
 const d = new Date()
-const sc_name = d.getDay() +"_"+d.getMonth()+"_"+d.getFullYear()+"_"+d.getHours()+"_"+d.getMinutes()+"_"+d.getSeconds()+"_"+d.getMilliseconds();
+const sc_name = d.getDate() +"_"+(d.getMonth()+1)+"_"+d.getFullYear()+"_"+d.getHours()+"_"+d.getMinutes()+"_"+d.getSeconds()+"_"+d.getMilliseconds();
 const file_name = "Faille_" + sc_name + ".txt"
 
 console.log("")
