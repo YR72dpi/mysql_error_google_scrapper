@@ -2,7 +2,7 @@
 
 **MySQL Error Google Scrapper**
 
-This nodeJs script scrappes mysql errors found on google using puppeteer.
+This nodeJs script scrappes mysql errors found on google using [puppeteer](https://github.com/puppeteer/puppeteer).
 
 All error will be save on a file *.txt*
 
