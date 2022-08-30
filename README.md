@@ -16,6 +16,8 @@ It's look like [THIS](https://www.instagram.com/reel/Chm_IjoDS5n/)
 
 3. [**ISSUES**](#ISSUES)
 
+4. [To improve it](#to)
+
 ## Usage
 
 ```
@@ -62,14 +64,20 @@ inurl:id= & intext:"Warning: mysql_query()"
 
 ## ISSUES
 
-### Issuse n° 1
+### Issues n° 1
 This script work only for french google.
 
 Watch in *pupperteer.js*. It's because of css selectors
 
-**Solving** : [X]
+>**Solution** : [X]
 
-### Issuse n° 2
+### Issues n° 2
 This script is caught as a robot, often, after **29** query.
 
-**Solving** : use a vpn after 25 query.
+>**Solution** : use a vpn after 25 query.
+
+## To improve it
+
+1. Fix *Issues n° 1*
+2. Build a system to change of vpn each 25 query
+
