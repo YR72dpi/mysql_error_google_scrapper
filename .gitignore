@@ -1,0 +1,6 @@
+*.png
+/node_modules/
+*.txt
+type.bat
+*.txt
+push.bat
