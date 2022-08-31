@@ -78,6 +78,7 @@ This script is caught as a robot, often, after **29** query.
 
 ## To improve it
 
+0. Show when the recaptcha is found and removed the timeout
 1. Fix *Issues n° 1*
 2. Build a system to not get caught as a robot, like :
     - connect the script to a vpn and change of vpn each 25 query
