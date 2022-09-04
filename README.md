@@ -74,14 +74,17 @@ Watch in *pupperteer.js*. It's because of css selectors
 ### Issues n° 2
 This script is caught as a robot, often, after **29** query.
 
->**Solution** : use a vpn after 25 query.
+>**Solution** :    
+>- connect the script to a vpn and change of vpn each 25 query
+>- connect the script to a google account and manage the reCaptcha (which already trust you)
+>- Install an extension which solve the recaptcha like [Buster](https://chrome.google.com/webstore/detail/buster-captcha-solver-for/mpbjkejclgfgadiemmefgebjfooflfhl)
 
 ## To improve it
 
-0. Make a filter to exclud some terms in url
-1. Show when the recaptcha is found and removed the timeout
-2. Fix *Issues n° 1*
-3. Build a system to not get caught as a robot, like :
-    - connect the script to a vpn and change of vpn each 25 query
-    - connect the script to a google account and manage the reCaptcha(which already trust you)
+As well as solve these two issues, it's could be good to :
+
+- Make a filter to exclud some terms in url
+
+
+
 
