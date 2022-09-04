@@ -20,15 +20,22 @@ It's look like [THIS](https://www.instagram.com/reel/Chm_IjoDS5n/)
 
 ## Usage
 
-```
+**Installation**
+
+```cmd
 mkdir megs
 cd megs
 git clone https://github.com/YR72dpi/mysql_error_google_scrapper.git
 # unzip
 npm update
-npm run megs
-
 ```
+
+**Usage**
+
+```cmd
+npm run megs
+```
+
 
 ## Config
 
