@@ -1,0 +1,10 @@
+ERROR
+inurl:normandiewebschool.fr & intext:"Warning: mysql_fetch_assoc()"
+inurl:normandiewebschool.fr & intext:"Warning: query()"
+inurl:normandiewebschool.fr & intext:"Warning: mysql_fetch_array()"
+inurl:normandiewebschool.fr & intext:"Warning: mysql_num_rows()"
+inurl:normandiewebschool.fr & intext:"Warning: mysql_result()"
+inurl:normandiewebschool.fr & intext:"Warning: pg_exec()"
+inurl:normandiewebschool.fr & intext:"Warning: mysql_result()"
+inurl:normandiewebschool.fr & intext:"Warning: mysql_num_rows()"
+inurl:normandiewebschool.fr & intext:"Warning: mysql_query()"

@@ -34,7 +34,7 @@ const search = async (tosearch) => {
         //await page.waitForNavigation({waitUntil: 'networkidle0'});
         //await page.waitForTimeout(3000); // teste le waitForSelector
         
-        await page.waitForSelector(".yuRUbf").then( async() => {
+        await page.waitForSelector(".yuRUbf"c).then( async() => {
             /******************************** */
 
             console.log("Analyse en cours ...")
