@@ -1,6 +1,6 @@
 import {get_error} from "./underscript/csv.js";
 import {search} from "./underscript/puppeteer.js"
-import {config} from "./config.js"
+import {config, exclude, regexFlag} from "./config.js"
 import child_process from "node:child_process"
 import * as fs from "fs";
 
@@ -48,11 +48,26 @@ for (let i = 0; i < nbr_faille; i++) {
                 console.log(e[0])
                 console.log("==> " + e[1])
                 console.log("")*/
+
+                /**
+                 * init var regexCaught = false
+                 * init var regexCaught_show = ""
+                 * foreach expression 
+                 *      if regex caught && !regex { regexcaught = true}
+                 *          
+                 */
                     
+                /**
+                 * if regexCaught == false 
+                 */
                 section_info += "_________________________________\n"
                 section_info += e[0] + "\n"
                 section_info += "|==> " + e[1] + "\n"
                 section_info += "\n"
+
+                /**
+                 * else { section_info = "regex expression caught :"+Regex expression}
+                 */
                 
             })
 
