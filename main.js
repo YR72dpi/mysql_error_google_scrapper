@@ -50,7 +50,7 @@ for (let i = 0; i < nbr_faille; i++) {
 
                 
                 exclude.forEach(reg => {
-                    const regex = new RegExp('/'+reg+'/', regexFlag)
+                    const regex = new RegExp(reg, regexFlag)
                     if(regex.exec(e) != null && regexCaught == false) {
                         //console.log(regex.exec(e))
                         regexCaught = true
@@ -66,7 +66,9 @@ for (let i = 0; i < nbr_faille; i++) {
                     section_info += "|==> " + e[1] + "\n"
                     section_info += "\n"
                 } else {
+                    section_info += "_________________________________\n"
                     section_info += "Excluded word caught : "+regexCaught_show+"\n"
+                    section_info += "|==> " + e[1] + "\n"
                 }
                 
             })
