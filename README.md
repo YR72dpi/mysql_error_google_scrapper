@@ -91,7 +91,4 @@ This script is caught as a robot, often, after **29** query.
 As well as solve these two issues, it's could be good to :
 
 - Make a filter to exclud some terms in url
-
-
-
-
+- Make possible to save information in another format than *.txt*
