@@ -4,8 +4,3 @@
 type.bat
 *.txt
 push.bat
-<<<<<<< HEAD
-*.csv
-=======
-.csv
->>>>>>> wordExclusion
