@@ -8,13 +8,14 @@ config["file"] = "error.csv" /* csv file with all error */
  * These string will be put on regex expression
  */
 const exclude = [
-    "stackoverflow",
+    "stackoverflow\.com",
+    "openclassrooms\.com",
     "php\.net",
     "dev",
     "forum(s)?"
 ]
 
-const regexFlag = "ig"
+const regexFlag = "gmi"
 
 export {
     config,
