@@ -1,6 +1,6 @@
 import {get_error} from "./underscript/csv.js";
 import {search} from "./underscript/puppeteer.js"
-import {config} from "./config.js"
+import {config, exclude, regexFlag} from "./config.js"
 import child_process from "node:child_process"
 import * as fs from "fs";
 
@@ -28,7 +28,7 @@ if (process.platform == "win32") {
 }
 
 for (let i = 0; i < nbr_faille; i++) {
-        console.log('\x1b[7m%s\x1b[0m', "Faille ("+(i+1)+"/"+nbr_faille+") en cours :")
+        console.log('\x1b[7m%s\x1b[0m', "|==> Faille ("+(i+1)+"/"+nbr_faille+") en cours :")
         console.log(faille[i])
 
         let section_name = "\n################################## \n"
@@ -48,11 +48,47 @@ for (let i = 0; i < nbr_faille; i++) {
                 console.log(e[0])
                 console.log("==> " + e[1])
                 console.log("")*/
+
+                /**
+                 * init var regexCaught = false
+                 * init var regexCaught_show = ""
+                 * foreach expression 
+                 *      if regex caught && !regex { regexcaught = true}
+                 *          
+                 */
+
+                var regexCaught = false
+                var regexCaught_show = "";
+
+                
+                exclude.forEach(reg => {
+                    const regex = new RegExp('/'+reg+'/', regexFlag)
+                    if(regex.exec(e) != null && regexCaught == false) {
+                        //console.log(regex.exec(e))
+                        regexCaught = true
+                        regexCaught_show += regex;
+                        console.log("\x1b[31m%s\x1b[0m", "Excluded word caught : "+ regexCaught_show)
+                    }
+                });
+                
                     
-                section_info += "_________________________________\n"
-                section_info += e[0] + "\n"
-                section_info += "|==> " + e[1] + "\n"
-                section_info += "\n"
+                /**
+                 * if regexCaught == false 
+                 */
+
+                if(!regexCaught) {
+                    section_info += "_________________________________\n"
+                    section_info += e[0] + "\n"
+                    section_info += "|==> " + e[1] + "\n"
+                    section_info += "\n"
+                } else {
+                    section_info += "Excluded word caught : "+regexCaught_show+"\n"
+                }
+                
+
+                /**
+                 * else { section_info = "regex expression caught :"+Regex expression}
+                 */
                 
             })
 
