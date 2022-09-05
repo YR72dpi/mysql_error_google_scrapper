@@ -1,11 +1,12 @@
 import { launch } from "puppeteer"
 import {config} from "../config.js"
 
-
 const search = async (tosearch) => {
     return new Promise( async (resolve, reject) => {
 
-        const browser = await launch({ headless: config["headless"] }) // pour ouvrir le navigateur launch({ headless: false })
+        const browser = await launch({ 
+            headless: config["headless"]
+        }) // pour ouvrir le navigateur launch({ headless: false })
         const page = await browser.newPage()
         /*
         page.setViewport({
@@ -31,15 +32,25 @@ const search = async (tosearch) => {
         //await page.type('input.gLFyf.gsfi', String.fromCharCode(13), {delay: Math.round(Math.random()*500)})
         await page.type('input.gLFyf.gsfi', String.fromCharCode(13), {delay: 0})
 
-        //await page.waitForNavigation({waitUntil: 'networkidle0'});
+        //await page.waitForNavigation({waitUntil: 'networkidle2'});
         //await page.waitForTimeout(3000); // teste le waitForSelector
+
+        /*await page.waitForSelector("#captcha-form", {"timeout": 1000}).then( async() => {
+            await page.click("#captcha-form > input[type=hidden]:nth-child(6)")
+            await page.click("#solver-button")
+        }).catch()*/
         
-        await page.waitForSelector(".yuRUbf", {"timeout": 2000}).then( async() => {
+        await page.waitForSelector(".yuRUbf", {"timeout": 200000000}).then( async() => {
             /******************************** */
 
             console.log("Analyse en cours ...")
 
             const result = await page.evaluate(() => {
+
+                if(document.getElementById("recaa") != null){
+                    console.log("\x1b[31m%s\x1b[0m", "ReCaptcha caught")
+                }
+
                 let divTarget = document.querySelectorAll('.yuRUbf')
                 console.log(divTarget)
                 let findhere = []

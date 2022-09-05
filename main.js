@@ -66,9 +66,11 @@ for (let i = 0; i < nbr_faille; i++) {
                     section_info += "|==> " + e[1] + "\n"
                     section_info += "\n"
                 } else {
-                    section_info += "_________________________________\n"
-                    section_info += "Excluded word caught : "+regexCaught_show+"\n"
-                    section_info += "|==> " + e[1] + "\n"
+                    if (config["print_excl_w"]) {
+                        section_info += "_________________________________\n"
+                        section_info += "Excluded word caught : "+regexCaught_show+"\n"
+                        section_info += "|==> " + e[1] + "\n"
+                    }
                 }
                 
             })
