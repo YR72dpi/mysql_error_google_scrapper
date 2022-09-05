@@ -44,18 +44,6 @@ for (let i = 0; i < nbr_faille; i++) {
             
             
             tab_thisFaille.forEach(e => {
-                /*console.log("_________________________________")
-                console.log(e[0])
-                console.log("==> " + e[1])
-                console.log("")*/
-
-                /**
-                 * init var regexCaught = false
-                 * init var regexCaught_show = ""
-                 * foreach expression 
-                 *      if regex caught && !regex { regexcaught = true}
-                 *          
-                 */
 
                 var regexCaught = false
                 var regexCaught_show = "";
@@ -71,10 +59,6 @@ for (let i = 0; i < nbr_faille; i++) {
                     }
                 });
                 
-                    
-                /**
-                 * if regexCaught == false 
-                 */
 
                 if(!regexCaught) {
                     section_info += "_________________________________\n"
@@ -84,11 +68,6 @@ for (let i = 0; i < nbr_faille; i++) {
                 } else {
                     section_info += "Excluded word caught : "+regexCaught_show+"\n"
                 }
-                
-
-                /**
-                 * else { section_info = "regex expression caught :"+Regex expression}
-                 */
                 
             })
 
