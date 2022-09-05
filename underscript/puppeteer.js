@@ -26,15 +26,15 @@ const search = async (tosearch) => {
 
         console.log("Ecriture de la recherche...")
         //await page.type('input.gLFyf.gsfi', tosearch, {delay: Math.round(Math.random()*500)})
-        await page.type('input.gLFyf.gsfi', tosearch, {delay: 100})
+        await page.type('input.gLFyf.gsfi', tosearch, {delay: 50})
         console.log("Recherche en cours...")
         //await page.type('input.gLFyf.gsfi', String.fromCharCode(13), {delay: Math.round(Math.random()*500)})
-        await page.type('input.gLFyf.gsfi', String.fromCharCode(13), {delay: 100})
+        await page.type('input.gLFyf.gsfi', String.fromCharCode(13), {delay: 50})
 
         //await page.waitForNavigation({waitUntil: 'networkidle0'});
         //await page.waitForTimeout(3000); // teste le waitForSelector
         
-        await page.waitForSelector(".yuRUbf").then( async() => {
+        await page.waitForSelector(".yuRUbf", {"timeout": 2000}).then( async() => {
             /******************************** */
 
             console.log("Analyse en cours ...")
