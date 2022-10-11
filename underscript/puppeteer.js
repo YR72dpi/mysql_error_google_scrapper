@@ -6,7 +6,7 @@ const search = async (tosearch) => {
 
         const browser = await launch({ 
             headless: config["headless"]
-        }) // pour ouvrir le navigateur launch({ headless: false })
+        })
         const page = await browser.newPage()
         /*
         page.setViewport({
@@ -26,7 +26,6 @@ const search = async (tosearch) => {
         await page.click("input.gLFyf.gsfi") // gLFyf gsfi
 
         console.log("Ecriture de la recherche...")
-        //await page.type('input.gLFyf.gsfi', tosearch, {delay: Math.round(Math.random()*500)})
         await page.type('input.gLFyf.gsfi', tosearch, {delay: 0})
         console.log("Recherche en cours...")
         //await page.type('input.gLFyf.gsfi', String.fromCharCode(13), {delay: Math.round(Math.random()*500)})
@@ -34,22 +33,14 @@ const search = async (tosearch) => {
 
         //await page.waitForNavigation({waitUntil: 'networkidle2'});
         //await page.waitForTimeout(3000); // teste le waitForSelector
-
-        /*await page.waitForSelector("#captcha-form", {"timeout": 1000}).then( async() => {
-            await page.click("#captcha-form > input[type=hidden]:nth-child(6)")
-            await page.click("#solver-button")
-        }).catch()*/
         
-        await page.waitForSelector(".yuRUbf", {"timeout": 200000000}).then( async() => {
+        await page.waitForSelector(".yuRUbf", {"timeout": 2000}).then( async() => {
             /******************************** */
 
             console.log("Analyse en cours ...")
 
-            const result = await page.evaluate(() => {
-
-                if(document.getElementById("recaa") != null){
-                    console.log("\x1b[31m%s\x1b[0m", "ReCaptcha caught")
-                }
+            const result = await page.evaluate(async () => {
+                    
 
                 let divTarget = document.querySelectorAll('.yuRUbf')
                 console.log(divTarget)
@@ -58,10 +49,7 @@ const search = async (tosearch) => {
                     let a = e.children[0]
                     let lien = a.href
                     let titre = a.children[1].innerText
-
                     findhere.push([titre, lien])
-                        
-                    
                 });
 
                 return findhere

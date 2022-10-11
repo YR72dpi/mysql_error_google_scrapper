@@ -8,7 +8,8 @@ import * as fs from "fs";
 var faille = await get_error()
 var nbr_faille = faille.length;
 
-console.log("\x1b[34m", "\n\nNombre de faille : " + nbr_faille)
+console.log("", "\n\nNombre de faille : " + nbr_faille)
+//console.log("\x1b[34m%s\x1b[0m", "\n\nNombre de faille : " + nbr_faille)
 console.log(faille)
 
 const d = new Date()
@@ -86,6 +87,14 @@ for (let i = 0; i < nbr_faille; i++) {
             console.log('\x1b[31m%s\x1b[0m', "Pas de resultat faille " + (i+1) + "\n")
             
         })
-        
-        setTimeout(()=>{}, 1000)
+                 
+       
 }
+
+console.log("\x1b[32m%s\x1b[0m", "\t#     #  #######   #####    ##### ") 
+console.log("\x1b[32m%s\x1b[0m", "\t##   ##  #        #     #  #     #") 
+console.log("\x1b[32m%s\x1b[0m", "\t# # # #  #        #        #      ") 
+console.log("\x1b[32m%s\x1b[0m", "\t#  #  #  #####    #  ####   ##### ") 
+console.log("\x1b[32m%s\x1b[0m", "\t#     #  #        #     #        #") 
+console.log("\x1b[32m%s\x1b[0m", "\t#     #  #        #     #  #     #") 
+console.log("\x1b[32m%s\x1b[0m", "\t#     #  #######   #####    ##### ") 
