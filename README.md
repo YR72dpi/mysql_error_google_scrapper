@@ -104,4 +104,6 @@ This script is caught as a robot, often, after **29** query.
 As well as solve these two issues, it's could be good to :
 
 - Make possible to save information in another format than *.txt*
+- Make a file with words to exclude instead of config file  
+- Make one command line system to catch MySQL Error with one command line
 - Make a GUI interface
