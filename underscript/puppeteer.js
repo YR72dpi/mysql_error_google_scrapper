@@ -23,16 +23,17 @@ const search = async (tosearch) => {
             waitUntil: 'networkidle2'
         })
         await page.click("button#W0wltc")
-        await page.click("input.gLFyf.gsfi") // gLFyf gsfi
+        setTimeout(()=>{}, 3600)
+        await page.click("textarea#APjFqb") // gLFyf gsfi
 
-        console.log("Ecriture de la recherche...")
-        await page.type('input.gLFyf.gsfi', tosearch, {delay: 0})
+        console.log("Ecriture de la recherche...");
+        await page.type('textarea#APjFqb', tosearch, {delay: 0})
         console.log("Recherche en cours...")
-        //await page.type('input.gLFyf.gsfi', String.fromCharCode(13), {delay: Math.round(Math.random()*500)})
-        await page.type('input.gLFyf.gsfi', String.fromCharCode(13), {delay: 0})
+        await page.type('textarea#APjFqb', String.fromCharCode(13), {delay: Math.round(Math.random()*500)})
+        await page.type('textarea#APjFqb', String.fromCharCode(13), {delay: 0})
 
-        //await page.waitForNavigation({waitUntil: 'networkidle2'});
-        //await page.waitForTimeout(3000); // teste le waitForSelector
+        await page.waitForNavigation({waitUntil: 'networkidle2'});
+        await page.waitForTimeout(3000); // teste le waitForSelector
         
         await page.waitForSelector(".yuRUbf", {"timeout": 2000}).then( async() => {
             /******************************** */
