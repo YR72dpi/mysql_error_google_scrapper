@@ -1,12 +1,26 @@
-import { launch } from "puppeteer"
+import puppeteerVanilla from 'puppeteer';
+import { addExtra } from 'puppeteer-extra';
+import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import {config} from "../config.js"
+
+const humanTypeDelay = () => {
+    let delay = Math.random()
+    // Math.round(Math.random()*500
+    while (Math.round(delay*100) < 50) {
+        delay = Math.random()
+    }
+    return Math.round(delay*100)
+}
 
 const search = async (tosearch) => {
     return new Promise( async (resolve, reject) => {
 
-        const browser = await launch({ 
+        const puppeteer = addExtra(puppeteerVanilla);
+        
+        const browser = await puppeteer.launch({ 
             headless: config["headless"]
         })
+        await StealthPlugin().onBrowser()
         const page = await browser.newPage()
         /*
         page.setViewport({
@@ -27,9 +41,11 @@ const search = async (tosearch) => {
         await page.click("textarea#APjFqb") // gLFyf gsfi
 
         console.log("Ecriture de la recherche...");
-        await page.type('textarea#APjFqb', tosearch, {delay: 0})
+        
+        await page.type('textarea.gLFyf', tosearch, {delay: humanTypeDelay()})
+
         console.log("Recherche en cours...")
-        await page.type('textarea#APjFqb', String.fromCharCode(13), {delay: Math.round(Math.random()*500)})
+        await page.type('textarea#APjFqb', String.fromCharCode(13), {delay: humanTypeDelay()})
         await page.type('textarea#APjFqb', String.fromCharCode(13), {delay: 0})
 
         await page.waitForNavigation({waitUntil: 'networkidle2'});
@@ -69,7 +85,7 @@ const search = async (tosearch) => {
                 resolve(result)
                 await browser.close()
             }
-
+            
 
             /********************* */
         }).catch( async () => {

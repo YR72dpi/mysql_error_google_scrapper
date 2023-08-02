@@ -92,7 +92,7 @@ Watch in *pupperteer.js*. It's because of css selectors
 >**Solution** : [X]
 
 ### Issues n° 2
-This script is caught as a robot, often, after **29** query.
+This script is caught as a robot, often, after **~35** query.
 
 >**Solution** :    
 >- connect the script to a vpn and change of vpn each 25 query
