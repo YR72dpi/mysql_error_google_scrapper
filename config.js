@@ -13,7 +13,23 @@ const exclude = [
     "openclassrooms\.com",
     "php\.net",
     "dev",
-    "forum(s)?"
+    "forum(s)?",
+    "www\.facebook\.com",
+    "sql",
+    "faille",
+    "xss",
+    "LFI",
+    "laravel",
+    "symfony",
+    "bug",
+    "bugs",
+    "wordpress",
+    "cakephp",
+    "ovh",
+    "support",
+    "google\.com",
+    "github\.com",
+    'www\.phphelp\.com'
 ]
 
 const regexFlag = "gmi"
