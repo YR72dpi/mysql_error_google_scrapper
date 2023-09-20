@@ -1,6 +1,8 @@
+![image](docs/FireFly_logo_megs.jpg)
+
 # MEGS
 
-**MySQL Error Google Scrapper**
+**M**ySQL **E**rror **G**oogle **S**crapper
 
 This nodeJs script scrappes mysql errors found on google using [puppeteer](https://github.com/puppeteer/puppeteer).
 
@@ -14,7 +16,7 @@ It's look like [THIS](https://www.instagram.com/reel/Chm_IjoDS5n/)
 
 2. [Config](#Config)
 
-3. [**ISSUES**](#ISSUES)
+3. [ISSUES](#ISSUES)
 
 4. [To improve it](#to-improve-it)
 
