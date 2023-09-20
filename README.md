@@ -1,5 +1,5 @@
 ![image](docs/FireFly_logo_megs.jpg)
-
+<center><sup><sub>Adobe FireFly Generation</sub></sup></center>
 # MEGS
 
 **M**ySQL **E**rror **G**oogle **S**crapper
